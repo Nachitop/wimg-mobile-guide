@@ -1,0 +1,7 @@
+{
+  "name": "wimg-guia",
+  "integrations": {
+    "cordova": {}
+  },
+  "type": "ionic-angular"
+}

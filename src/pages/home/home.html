@@ -1,0 +1,34 @@
+
+<ion-content padding>
+  <ion-title text-center>Travel status</ion-title>
+  <br>
+  <br>
+  <ion-list *ngIf="turista && mostrarInfoTurista==true" >
+    <ion-item style="margin:auto"  class="bordered">
+      <ion-avatar  item-start>
+          <img [src]="turista.foto">
+        </ion-avatar>
+        <h3>Name: {{turista.nombre}} {{turista.apellido}}</h3>
+        <div *ngIf="lugar">
+        <div>
+            <h3 class="inline-p">Place: </h3><p class="inline-p">{{lugar.nombre}}</p>
+            </div>
+            <div>
+                <h3 class="inline-p">Meeting place: </h3> <p class="inline-p">{{lugar.lugar_de_encuentro}}</p>
+                </div>
+              </div>
+  
+      </ion-item>
+      <br>
+      <div *ngIf="mostrarBotonFinalizar==false">
+    <button ion-button block (click)="comenzarViaje()">Begin travel</button>
+  </div>
+    <div *ngIf="mostrarBotonFinalizar==true">
+    <button ion-button block (click)="finalizarViaje()">Finish travel</button>   
+     </div>
+    
+  
+   
+    </ion-list>
+    
+  </ion-content>
